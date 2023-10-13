@@ -1,4 +1,5 @@
-// Disclaimer! I don't know everything. I'm new to coding. It helps me in the moment and when coming back later to write detailed comments. I'm taking this to the next level in this bootcamp so that me and other students can attempt to make more sense of a vague and ambiguous curriculum. 
+// Disclaimer! I don't know everything. I'm new to coding. It helps me in the moment and when coming back later to write detailed comments. 
+// I'm taking this to the next level in this bootcamp so that me and other students can attempt to make more sense of a vague and ambiguous curriculum. 
 // It's hard to learn coding without vocabulary or lists of covered material, so I'm adding some vocab here to supplement the lack of resources given in the MITxPro Emeritus Codio assignment. 
 // I hope this helps someone out there! I'm glad I had the time and enough previous coding knowledge to break down each piece of this. If you're reading, good luck! 
 // Feel free to reach out if you spot something. I want to learn and grow!
@@ -30,7 +31,8 @@ function initialize() {
 
 // No need to change the following code
 // The moveTo function moves a given ball to a set x and y coordinates on the page
-// *** you are creating the name of the parameters as arguments at the same time you're creating the function. You do not need to make ball, x, or y into variables. They're parameters that exist only in this function as ball is not declared anywhere. 
+// *** you are creating the name of the parameters as arguments at the same time you're creating the function. 
+// You do not need to make ball, x, or y into variables. They're parameters that exist only in this function as ball is not declared anywhere. 
 // *** this function moves the ball to specific x and y coordinates and concatenates the number with the string px, so that CSS knows they're pixels
 function moveTo(ball, x, y) {
   ball.element.style.left = x + 'px';
@@ -39,7 +41,9 @@ function moveTo(ball, x, y) {
 
 // No need to change the following code
 // The changeDirectionIfNecessary function reverses the ball direction when it hits the area borders
-// *** once again this is creating the name of the parameters as arguments at the same time you're creating the function. You do not need to make ball, x, or y a variable. They're parameters that exist only in this function. Yes, the same parameter names are being used in moveTo() but they are still functionally scoped as ball is not declared anywhere. 
+// *** once again this is creating the name of the parameters as arguments at the same time you're creating the function. 
+// You do not need to make ball, x, or y a variable. They're parameters that exist only in this function. 
+// Yes, the same parameter names are being used in moveTo() but they are still functionally scoped as ball is not declared anywhere. 
 // *** this will change the direction of the balls once they hit the area's width or height minus the ball's width or height
 function changeDirectionIfNecessary(ball, x, y) {
   if (x < 0 || x > area.width - ball.width) {
@@ -51,10 +55,15 @@ function changeDirectionIfNecessary(ball, x, y) {
 }
 
 // TODO: implement the create function
-// *** reminder, you could name color, dx, and dy whatever you'd like as long as you refer to them the same way throughout the function's scope. These arguments were not declared anywhere earlier. Although, dx and dy are commonplace to mean directionX and directionY
+// *** reminder, you could name color, dx, and dy whatever you'd like as long as you refer to them the same way throughout the function's scope. 
+// These arguments were not declared anywhere earlier. 
+// Although, dx and dy are commonplace to mean directionX and directionY
 function create(color, dx, dy) {
-  // *** line 58 is object construction. Strangely this comes from way out of left field seeing as how they only just taught us what a primitive data types were this week...
-  //  *** anyway... newBall is being created from "this". "this" is pretty advanced JS. What "this" is changes often based on how it's used. In this context, we're telling JS to create a new object with the properties were setting on newBall.___ 
+  // *** line 58 is object construction. 
+  // Strangely this comes from way out of left field seeing as how they only just taught us what a primitive data types were this week, lol...
+  //  *** anyway... newBall is being created from "this". 
+  // "this" is pretty advanced JS. What "this" is changes often based on how it's used. 
+  // In this context, we're telling JS to create a new object with the properties were setting on newBall.___ 
   const newBall = Object.create(this);
 
   // TODO: Set newBall properties: dx, dy, width, height
@@ -73,12 +82,16 @@ function create(color, dx, dy) {
   newBall.height = 40;
 
   // TODO: set the newBall.element property and initialize it to a Html element "div"
-  // *** dynamically creates a new element called "div" and drops it into the HTML body. This div will house the newBall element
-  // *** this is where we create the .element we'll use later. It refers to the new div we created that will be read by HTML. Much like for the "area" Object in line 15
+  // *** dynamically creates a new element called "div" and drops it into the HTML body. 
+  // This div will house the newBall element
+  // *** this is where we create the .element we'll use later. 
+  // It refers to the new div we created that will be read by HTML. Much like for the "area" Object in line 15
   newBall.element = document.createElement("div");
 
   // TODO: set the backgroundColor, width and height style properties for newBall.element
-  // *** because newBall is an Object, element is one of it's keys. After accessing the element, (which above we set to the "area" div), we're going to use .style.___ to set it's color, width, and height. Concatenating with the string "px" again so CSS knows its a pixel location.
+  // *** because newBall is an Object, element is one of it's keys. 
+  // After accessing the element, (which above we set to the "area" div), we're going to use .style.___ to set it's color, width, and height. 
+  // Concatenating with the string "px" again so CSS knows its a pixel location.
   newBall.element.style.backgroundColor = color;
   newBall.element.style.width = newBall.width + "px";
   newBall.element.style.height = newBall.height + "px";
@@ -89,7 +102,9 @@ function create(color, dx, dy) {
 
   // TODO: set the width and height of newBall based on newBall.element
   // Hint: use the Javascript parseInt() function to convert a string value to integer
-  // *** because we concatenated our height/width with "px" earlier so CSS could understand it, we now have to take that "px" off so javascript can work with it. The parseInt() JS built-in function removes strings and converts it back to a primitive Number. Because JS is read top to bottom, we are overwriting height and width again here
+  // *** because we concatenated our height/width with "px" earlier so CSS could understand it, we now have to take that "px" off so javascript can work with it. 
+  // The parseInt() JS built-in function removes strings and converts it back to a primitive Number. 
+  // Because JS is read top to bottom, we are overwriting height and width again here
   newBall.width = parseInt(newBall.element.style.width);
   newBall.height = parseInt(newBall.element.style.height);
 
@@ -104,12 +119,17 @@ function create(color, dx, dy) {
 // *** continue to use ball, x, y arguments
 function update(ball, x, y) {
   // TODO: use the moveTo() function to move the ball
-  // *** call moveTo() function inside the update function. In order to update(), 1st we use the current arguments for ball, x, y to determine where the ball is, 2nd we need to moveTo() the new coordinates
+  // *** call moveTo() function inside the update function. 
+  // In order to update():
+  // 1st we use the current arguments for ball, x, y to determine where the ball is
+  // 2nd we need to moveTo() the new coordinates
   moveTo(ball, x, y);
 
   // TODO: use the Javascript setTimeout() method to call changeDirectionIfNecessary() and update() every 16ms
-  // *** this feels like a tricky way to word this. We need to find out where the ball is before calling either of those functions on it since these arguments are not pointing to a position on the page.
-  // *** let's make x and y mean something inside this function. We'll need them to be defined so we can know where the ball has moved to before calling update() on it.
+  // *** this feels like a tricky way to word this. 
+  // I need to know where the ball is before calling either of those functions on it since these arguments are not pointing to a position on the page.
+  // *** let's make x and y mean something inside this function. 
+  // We'll need them to be defined so we can know where the ball has moved to before calling update() on it.
   x = x + ball.dx;
   y = y + ball.dy;
 
@@ -122,9 +142,12 @@ function update(ball, x, y) {
   }, 16);
 }
 
-// *** *** *** below is the answer they gave us. Please tell me how a 2 weeks new student would be able to do this with no help, resources, or links? Why do they need to divide 1000 / 60? Why is this answer so convoluted? This is very much giving "POP QUIZ! GOTCHA!" vibes that feels just plain rude to give to a student who's been coding part-time for less than 2 weeks with no explanation of what it means or why. New students don't know if this is supposed to be easy or hard AF. 
-// *** *** *** As a beginner, if I were presented with this solution as if it was the simplest thing in the world, I would be scared shitless of the program. I mean c'mon... let us build some confidence first! Is this a scare tactic? I dunno... but the real bummer is tht it's never discussed in class before or after. They throw this at us and don't say a word of clarity or excitement about it later.
-//  vvvvvvvvvv
+// *** below is the answer they gave us. 
+// How a 2 weeks new student be able to do this with no help, resources, or links? 
+// Why do they need to divide 1000 / 60? 
+// Why is this answer so convoluted? 
+/* This is very much giving "POP QUIZ! GOTCHA!" vibes feels just plain rude to give to a student who's been coding part-time for less than 2 weeks with no explanation of what it means or why.  New students don't know if this is supposed to be easy or hard AF.  As a true beginner, if I were presented with this solution as if it was the simplest thing in the world, I would be scared shitless of the program.  I mean c'mon... let us build some confidence first! Is this a scare tactic? I dunno... but the real bummer is tht it's never discussed in class before or after. They throw this at us and don't say a word of clarity or excitement about it later. */
+
 
 // // TODO: implement the update function
 // function update(ball, x, y) {
