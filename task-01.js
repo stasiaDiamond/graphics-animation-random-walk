@@ -1,6 +1,10 @@
-/* Disclaimer! I don't know everything. I'm new to coding. It helps me in the moment and when coming back later to write detailed comments. I'm taking this to the next level in this bootcamp so that me and other students can attempt to make more sense of a vague and ambiguous curriculum. It's hard to learn coding without vocabulary or lists of covered material, so I'm adding some vocab here to supplement the lack of resources given in the MITxPro Emeritus Codio assignment. */
-/* I hope this helps someone out there! I'm glad I had the time and enough previous coding knowledge to break down each piece of this. If you're reading, good luck! 
-Feel free to reach out if you spot something. I want to learn and grow! */
+//  Disclaimer! I don't know everything. I'm new to coding. 
+// It helps me in the moment and when coming back later to write detailed comments. 
+// I'm taking this to the next level in this bootcamp so that me and other students can attempt to make more sense of a vague and ambiguous curriculum. 
+// It's hard to learn coding without vocabulary or lists of covered material, so I'm adding some vocab here to supplement the lack of resources given in the MITxPro Emeritus Codio assignment.
+// I hope this helps someone out there! 
+// I'm glad I had the time and enough previous coding knowledge to break down each piece of this. If you're reading, good luck! 
+// Feel free to reach out if you spot something. I want to learn and grow!
 
 
 
@@ -144,7 +148,13 @@ function update(ball, x, y) {
 // How a 2 weeks new student be able to do this with no help, resources, or links? 
 // Why do they need to divide 1000 / 60? 
 // Why is this answer so convoluted? 
-/* This is very much giving "POP QUIZ! GOTCHA!" vibes feels just plain rude to give to a student who's been coding part-time for less than 2 weeks with no explanation of what it means or why.  New students don't know if this is supposed to be easy or hard AF.  As a true beginner, if I were presented with this solution as if it was the simplest thing in the world, I would be scared shitless of the program.  I mean c'mon... let us build some confidence first! Is this a scare tactic? I dunno... but the real bummer is tht it's never discussed in class before or after. They throw this at us and don't say a word of clarity or excitement about it later. */
+// This is very much giving "POP QUIZ! GOTCHA!" vibes feels just plain rude to give to a student who's been coding part-time for less than 2 weeks with no explanation of what it means or why.  
+// New students don't know if this is supposed to be easy or hard AF.  
+// As a true beginner, if I were presented with this solution as if it was the simplest thing in the world, I would be scared shitless of the program.  
+// I mean c'mon... let us build some confidence first! 
+// Is this a scare tactic? I dunno... 
+// but the real bummer is that it's never discussed in class before or after. 
+// They throw this at us and don't say a word of clarity or excitement about it later.
 
 
 // // TODO: implement the update function
